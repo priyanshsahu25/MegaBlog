@@ -36,17 +36,31 @@ export default function PostForm({ post }) {
             }
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
-            console.log(file);
-            if (file) {
+            // console.log(file);
+            // if (file && file.$id) {
+            //     const fileId = file.$id;
+            //     data.featuredImage = fileId;
+            //     console.log('usedata id is ', userData.$id );
+            //     const dbPost = await appwriteService.createPost({ ...data ,userId: userData.$id });
+               
+            //     if (dbPost) {
+            //         navigate(`/post/${dbPost.$id}`);
+            //     }
+            // }
+
+            if (file && file.$id) { // Check if file is defined and has $id property
                 const fileId = file.$id;
                 data.featuredImage = fileId;
                 console.log('usedata id is ', userData.$id );
                 const dbPost = await appwriteService.createPost({ ...data ,userId: userData.$id });
-               
-                if (dbPost) {
+                
+                if (dbPost && dbPost.$id) { // Check if dbPost is defined and has $id property
                     navigate(`/post/${dbPost.$id}`);
                 }
+            } else {
+                console.error('Error: Unable to upload file or file id is not available.');
             }
+            
         }
     };
 
