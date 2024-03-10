@@ -60,6 +60,16 @@ const router = createBrowserRouter([
                 </AuthLayout>
             ),
         },
+        
+        {
+            path: "megablog2507.netlify.app/add-post",
+            element: (
+                <AuthLayout authentication>
+                    {" "}
+                    <AddPost />
+                </AuthLayout>
+            ),
+        },
         {
             path: "/edit-post/:slug",
             element: (
