@@ -23,14 +23,14 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
         {
-            path: "megablog2507.netlify.app/",
+            path: "/",
             element: <Home />,
         },
         
         
         
         {
-            path: "megablog2507.netlify.app/login",
+            path: "/login",
             element: (
                 <AuthLayout authentication={false}>
                     <Login />
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/signup",
+            path: "/signup",
             element: (
                 <AuthLayout authentication={false}>
                     <Signup />
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/all-posts",
+            path: "/all-posts",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/add-post",
+            path: "/add-post",
             element: (
                 <AuthLayout authentication>
                     {" "}
