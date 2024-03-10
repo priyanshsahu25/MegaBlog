@@ -13,10 +13,11 @@ export default function PostForm({ post }) {
     const navigate=useNavigate();
 
     const userData = useSelector((state) => state.auth.userData);
-    // console.log('userdata is:',userData);
+    console.log('userdata is:',userData);
     if(!userData ){
        
         window.location.reload();
+        navigate('/add-post')
     }
    
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
