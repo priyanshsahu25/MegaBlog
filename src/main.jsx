@@ -19,15 +19,15 @@ import AllPosts from "./pages/AllPosts";
 
 const router = createBrowserRouter([
   {
-    path: "megablog2507.netlify.app/",
+    path: "/",
     element: <App />,
     children: [
         {
-            path: "megablog2507.netlify.app",
+            path: "/",
             element: <Home />,
         },
         {
-            path: "megablog2507.netlify.app/login",
+            path: "/login",
             element: (
                 <AuthLayout authentication={false}>
                     <Login />
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/signup",
+            path: "/signup",
             element: (
                 <AuthLayout authentication={false}>
                     <Signup />
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/all-posts",
+            path: "/all-posts",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/add-post",
+            path: "/add-post",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/edit-post/:slug",
+            path: "/edit-post/:slug",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "megablog2507.netlify.app/post/:slug",
+            path: "/post/:slug",
             element: <Post />,
         },
     ],
