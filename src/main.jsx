@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         
         
         {
-            path: "/65edc554ea89e077475eb683--storied-dasik-311de6.netlify.app/login",
+            path: "/megablog2507.netlify.app/login",
             element: (
                 <AuthLayout authentication={false}>
                     <Login />
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/65edc554ea89e077475eb683--storied-dasik-311de6.netlify.app/signup",
+            path: "/megablog2507.netlify.app/signup",
             element: (
                 <AuthLayout authentication={false}>
                     <Signup />
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/65edc554ea89e077475eb683--storied-dasik-311de6.netlify.app/all-posts",
+            path: "/all-posts",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/65edc554ea89e077475eb683--storied-dasik-311de6.netlify.app/add-post",
+            path: "/megablog2507.netlify.app/add-post",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/65edc554ea89e077475eb683--storied-dasik-311de6.netlify.app/edit-post/:slug",
+            path: "/edit-post/:slug",
             element: (
                 <AuthLayout authentication>
                     {" "}
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
             ),
         },
         {
-            path: "/65edc554ea89e077475eb683--storied-dasik-311de6.netlify.app/post/:slug",
+            path: "/post/:slug",
             element: <Post />,
         },
     ],
