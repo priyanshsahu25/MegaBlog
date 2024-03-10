@@ -17,7 +17,7 @@ const displayContent = content.split(' ').length > 10 ? trimmedContent + '...' :
 
 
 
-<div className=" rounded-md border shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div className=" rounded-md border shadow-md  ">
   
       <img
       src={appwriteService.getFilePreview(featuredImage)}
@@ -29,7 +29,7 @@ const displayContent = content.split(' ').length > 10 ? trimmedContent + '...' :
         <h1 className="flex justify-center text-lg font-semibold ">
         {displayTitle}&nbsp; 
         </h1>
-        <p className="mt-3 text-sm text-gray-600">
+        <p className="mt-3 text-sm text-gray-600 ">
         {parse(displayContent)}
         </p>
         
