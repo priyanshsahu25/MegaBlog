@@ -16,7 +16,7 @@ function LogoutBtn() {
         authService.logout().then(() => {
           setLoggedin(false)
             dispatch(logout())
-            navigate("/login")
+            navigate("/")
             
          
         })
