@@ -8,16 +8,15 @@ import { useEffect } from "react";
 import Loader from "../Loader";
 
 export default function PostForm({ post }) {
-    const navigate = useNavigate();
-    const [loader,setloader]=useState(false);
-    const [content,setContent]=useState('');
-    const [Title,setTitle]=useState('');
-    const [image,setImage]=useState('');
-    const userData = useSelector((state) => state.auth.userData);
   
+    const [loader,setloader]=useState(false);
+    const navigate=useNavigate();
+
+    const userData = useSelector((state) => state.auth.userData);
+    // console.log('userdata is:',userData);
     if(!userData ){
        
-        navigate('/add-post')
+        window.location.reload();
     }
    
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
