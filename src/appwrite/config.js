@@ -32,6 +32,8 @@ export class Service{
         const year = date.getFullYear(); // Get full year
         
         const formattedDate = `${day}-${month}-${year}`;
+        
+
     
     return await this.databases.createDocument(
         conf.appwriteDatabaseId,

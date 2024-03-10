@@ -38,29 +38,37 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='py-3 shadow '>
       <Container>
         <nav className='flex'>
-          <div className='mr-4'>
+          <div className='md:mr-4'>
             <Link to='/'>
-              <Logo width='70px'   />
-
+              <Logo width='180px' height='10px'/>
               </Link>
           </div>
-          <ul className='flex ml-auto'>
+          <ul className='flex md:ml-auto lg:ml-auto ml-auto xs:ml-0 '>
             {navItems.map((item) => 
             item.active ? (
-              <li key={item.name}>
+              <li className='sm:pl-2' key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                // className='inline-block px-6 py-2  duration-200 hover:bg-gray-100 rounded-full font-bold font-mono  text-lg sm:text-base  md:text-lg lg:text-xl'
+                className='inline-bock sm:px-2 sm:py-4 sm:text-lg
+                
+                md:px-6 py-2 duration-200 hover:bg-gray-100 rounded-full font-bold font-mono md:text-lg 
+                xs:text-sm xs:px-1
+               
+                lg:text-lg lg:px-6 lg:py-2'
+
                 >{item.name}</button>
               </li>
             ) : null
             )}
             {authStatus && (
-              <li>
-                <LogoutBtn />
+              <li  className='inline-bock sm:px-2 sm:py-4 sm:text-lg
+                
+              md:px-6 py-2 duration-200 hover:bg-gray-100 rounded-full font-bold font-mono md:text-lg lg:text-lg lg:px-6 lg:py-2'>
+                <LogoutBtn  />
               </li>
             )}
           </ul>

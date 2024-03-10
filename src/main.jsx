@@ -7,7 +7,7 @@ import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
@@ -26,6 +26,9 @@ const router = createBrowserRouter([
             path: "/",
             element: <Home />,
         },
+        
+        
+        
         {
             path: "/login",
             element: (

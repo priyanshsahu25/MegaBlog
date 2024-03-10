@@ -27,7 +27,7 @@ export default function Post() {
         appwriteService.deletePost(post.$id).then((status) => {
             if (status) {
                 appwriteService.deleteFile(post.featuredImage);
-                navigate("/");
+                navigate("/all-post");
             }
         });
     };
@@ -35,6 +35,9 @@ export default function Post() {
     return post ? (
         <div className="py-8">
             <Container>
+            <div className="w-full mb-6 text-center">
+                    <h1 className="text-2xl font-bold">{post.title}</h1>
+                </div>
                 <div className="w-full flex justify-center mb-4 relative  rounded-xl p-2">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
@@ -55,12 +58,13 @@ export default function Post() {
                         </div>
                     )}
                 </div>
-                <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
-                </div>
-                <div className="browser-css">
+                
+                <div className=" text-center">
                     {parse(post.content)}
                     </div>
+                <div className='text-center  text-gray-400  pl-4'>
+                    Posted by: <span className="text-black font-medium">{post.name}</span>
+                </div>    
             </Container>
         </div>
     ) : null;
