@@ -21,11 +21,11 @@ function Login() {
         setLoader(true);
             const session = await authService.login(data)
             if (session) {
-              
                 const userData = await authService.getCurrentUser();
                 if(userData) dispatch(authLogin(userData));
                 setLoader(false);
-                navigate("/all-post")
+                navigate("/all-posts")
+
             }
         } catch (error) {
           setLoader(false);
@@ -34,7 +34,7 @@ function Login() {
     }
 
   return (
-   <> {loader?  <div className='flex justify-center'>
+   <> {loader?  <div className='flex justify-center items-center h-screen'>
     <Loader/> 
    </div> :  <section>   
    <div className="grid grid-cols-1 lg:grid-cols-2">

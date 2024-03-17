@@ -22,7 +22,7 @@ function Signup() {
       if (userData) {
         const userData = await authService.getCurrentUser();
         if (userData) dispatch(login(userData));
-        navigate("/");
+        navigate("/all-posts");
       }
     } catch (error) {
       setLoader(false);
@@ -32,7 +32,7 @@ function Signup() {
 
   return (
 <>
-{loader ? <div className='flex justify-center'>
+{loader ? <div className='flex justify-center items-center h-screen'>
     <Loader/> 
    </div>:  <section>
       <div className="grid grid-cols-1 lg:grid-cols-2">
